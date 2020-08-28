@@ -1,0 +1,25 @@
+1. show dbs
+2. db.createCollection("Name")
+3. use "dbname" // create database and use database
+4. db // check which database is selected.
+5. db.dropDatabase() // Delete current database
+6. db.collection.insertOne({}) // insert query
+7. db.collection.insertMany([{},{}]) // insert more than one query
+8. db.collection.find() // show collections(means tablename)
+9. db.collection.find().pretty() //show collections
+10. db.collection.find({document: {$gt: "value" } })
+11. db.collection.find({document: {$gte: "value" } })
+12. db.collection.find({document: {$in: ["document.value","document.value"]  })
+13. db.collection.find({document: {$nin: ["document.value","document.value"] })
+14. db.collection.find({$and: [{"document.value"},{"document.value"}] }) // both value true then execute
+15. db.collection.find({$in: [{"document.value"},{"document.value"}]  }) // Only one condtion is satisfied
+16. db.biodata.find({age: {$not: {$gt: "value"} } })
+17. db.biodata.find({name: {$eq: "value"}},{class:1,_id:0}) // db.collection.find(query,projection)
+18. db.biodata.find().sort({document:1}) // sort.inscending
+19. db.biodata.find().sort({document:-1}) // sort.descending
+20. db.biodata.find().limit(2) //limit qurey
+21. db.biodata.find().sort({class:1}).limit(2) // combine sort(asc) and limit query
+22. db.biodata.find().sort({class:-1}).limit(2) // combine sort(desc) and limit query
+23. db.biodata.update( {name:"Harish"}, {$set: {age:28} })
+24. db.biodata.deleteOne({_id:4}) // delete query
+25. db.hellokali.find({_id:1},{document:"value"}).pretty() //relational query
